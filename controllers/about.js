@@ -10,7 +10,6 @@ const about = {
     };
     response.render("about", viewData);
   },
-  test()
 };
 
 module.exports = about;
