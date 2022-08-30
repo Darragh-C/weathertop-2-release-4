@@ -1,0 +1,54 @@
+{
+  "stationCollection": [
+    {
+      "id": "a4dc1850-26bf-11ed-b110-9f3bc3f15865",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "Kinsale",
+      "readings": [
+        {
+          "id": "ad30d0e0-26bf-11ed-b110-9f3bc3f15865",
+          "code": "600",
+          "temp": "25",
+          "windSpeed": "6",
+          "pressure": "1000",
+          "weather": "Rain",
+          "weatherIcon": "cloud rain",
+          "tempFar": "77.0",
+          "beaufourt": 1
+        },
+        {
+          "id": "de01dbf0-26c5-11ed-b40f-bb7c31a7a08c",
+          "code": "700",
+          "temp": "27",
+          "windSpeed": "8",
+          "pressure": "1001"
+        }
+      ],
+      "latestReading": {
+        "id": "ad30d0e0-26bf-11ed-b110-9f3bc3f15865",
+        "code": "600",
+        "temp": "25",
+        "windSpeed": "6",
+        "pressure": "1000",
+        "weather": "Rain",
+        "weatherIcon": "cloud rain",
+        "tempFar": "77.0",
+        "beaufourt": 1
+      },
+      "maxTemp": "25",
+      "minTemp": "25",
+      "maxWind": "6",
+      "minWind": "6",
+      "maxPressure": "1000",
+      "minPressure": "1000"
+    },
+    {
+      "id": "56494760-26c1-11ed-9bfc-2f71e1a3f0ec",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationName": "Cobh",
+      "latitude": "53",
+      "longitude": "51",
+      "readings": []
+    }
+  ]
+}

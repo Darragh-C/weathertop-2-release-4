@@ -1,0 +1,62 @@
+<div class="ui centered equal width grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui segment">
+        <h3>{{station.stationName}}</h3>
+        <i class="huge map marker icon"></i>
+        <br>
+        Latitude: {{station.latitude}}
+        <br>
+        Longitude: {{station.longitude}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h3>Weather</h3>
+        <i class="huge blue right floated {{station.latestReading.weatherIcon}} icon"></i>
+        <br>
+        {{station.latestReading.weather}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h3>Temp</h3>
+        <i class="huge grey temperature low icon"></i>
+        <br>
+        {{station.latestReading.temp}} C or {{station.latestReading.tempFar}} F
+        <br>
+        Max: {{station.maxTemp}}
+        <br>
+        Min: {{station.minTemp}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h3>Wind speed</h3>
+        <i class="huge grey wind icon"></i>
+        <br>
+        {{station.latestReading.beaufourt}} Bft
+        <br>
+        Max: {{station.maxWind}}
+        <br>
+        Min: {{station.minWind}}
+        <br>
+        Wind direction: {{station.latestReading.windDir}}
+        <br>
+        Feels like: {{station.latestReading.windChill}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h3>Pressure</h3>
+        <i class="huge grey tachometer alternate icon"></i>
+        <br>
+        {{station.latestReading.pressure}} hPa
+        <br>
+        Max: {{station.maxPressure}}
+        <br>
+        Min: {{station.minPressure}}
+      </div>
+    </div>
+  </div>
+</div>
