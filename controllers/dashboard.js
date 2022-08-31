@@ -12,7 +12,6 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const stations = stationStore.getUserStations(loggedInUser.id);
-    const latestReadings = [];
     for (let station of stations) {
       if (station.readings.length > 0) {
         stationAnalytics.updateWeather(station);
@@ -22,7 +21,7 @@ const dashboard = {
       title: "Weathertop 2.0 Release 2 Dashboard",
       stations: stations,
     };
-    logger.info('about to render', stationStore.getAllStations(), latestReadings);
+    logger.info('about to render', stationStore.getAllStations());
     response.render("dashboard", viewData);
   },
 
@@ -39,6 +38,18 @@ const dashboard = {
     logger.debug('Creating a new Station for ${newStation.userid}', newStation);
     stationStore.addStation(newStation);
     response.redirect('/dashboard');
+  },
+  deleteStation(request, response) {
+    const stationId = request.params.id;
+    logger.debug("deleting station ${stationId}");
+    stationStore.removeStation(stationId);
+    response.redirect("/dashboard")
+  },
+  sortStations(stations) {
+    let sortedStations = [];
+    for (let station of stations) {
+
+    }
   },
 };
 
