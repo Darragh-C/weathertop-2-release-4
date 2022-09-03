@@ -30,6 +30,7 @@ const station = {
       temp: request.body.temp,
       windSpeed: request.body.windSpeed,
       pressure: request.body.pressure,
+      date: metricConversion.formatDate(new Date()),
     }
     stationStore.addReading(stationId, newReading);
     response.redirect('/station/' + stationId);

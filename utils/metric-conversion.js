@@ -102,6 +102,10 @@ const metricConversion = {
       return "North";
     }
   },
+  formatDate(date) {
+    const formatedDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+    return formatedDate;
+  }
 }
 
 module.exports = metricConversion;

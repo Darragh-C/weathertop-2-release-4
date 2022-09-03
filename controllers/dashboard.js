@@ -17,6 +17,14 @@ const dashboard = {
         stationAnalytics.updateWeather(station);
       }
     }
+    stations.sort(function(a, b) {
+      if (a.stationName.toLowerCase() < b.stationName.toLowerCase()) {
+        return -1;
+      } else if (a.stationName.toLowerCase() > b.stationName.toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
     const viewData = {
       title: "Weathertop 2.0 Release 2 Dashboard",
       stations: stations,

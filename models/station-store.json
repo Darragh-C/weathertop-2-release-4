@@ -54,29 +54,49 @@
           "code": "800",
           "temp": "29",
           "windSpeed": "8",
-          "pressure": "1002"
+          "pressure": "1002",
+          "weather": "Thunder",
+          "weatherIcon": "bolt",
+          "tempFar": "84.2",
+          "beaufourt": 2
+        },
+        {
+          "id": "e9cdf3b0-2b75-11ed-806c-914a7680d1e2",
+          "code": "800",
+          "temp": "28",
+          "windSpeed": "7",
+          "pressure": "1001",
+          "date": "2022-09-03T10:48:15.211Z"
+        },
+        {
+          "id": "654d70f0-2b77-11ed-8fa9-ddcbad9d5f5e",
+          "code": "700",
+          "temp": "27",
+          "windSpeed": "6",
+          "pressure": "1000",
+          "date": "3/9/2022 11:58"
         }
       ],
       "latestReading": {
-        "id": "c7d7d3f0-2b72-11ed-88e2-43cf2f835273",
-        "code": "700",
-        "temp": "28",
-        "windSpeed": "7",
-        "pressure": "1001",
-        "weather": "Snow",
-        "weatherIcon": "snowflake",
-        "tempFar": "82.4",
+        "id": "d26a2070-2b72-11ed-88e2-43cf2f835273",
+        "code": "800",
+        "temp": "29",
+        "windSpeed": "8",
+        "pressure": "1002",
+        "weather": "Thunder",
+        "weatherIcon": "bolt",
+        "tempFar": "84.2",
         "beaufourt": 2
       },
-      "maxTemp": "28",
-      "minTemp": "28",
-      "maxWind": "7",
-      "minWind": "7",
-      "maxPressure": "1001",
-      "minPressure": "1001",
+      "maxTemp": "29",
+      "minTemp": "25",
+      "maxWind": "8",
+      "minWind": "6",
+      "maxPressure": "1002",
+      "minPressure": "1000",
       "tempTrend": 1,
-      "windTrend": 0,
-      "pressureTrend": 0
+      "windTrend": 1,
+      "pressureTrend": 1
     },
     {
       "id": "56494760-26c1-11ed-9bfc-2f71e1a3f0ec",
