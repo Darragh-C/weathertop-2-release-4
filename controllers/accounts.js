@@ -44,8 +44,7 @@ const accounts = {
 
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
-    const password = userstore.getUserByEmail()
-    if (user) {
+    if (user.password === request.body.password) {
       response.cookie('station', user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect('/dashboard');
@@ -58,6 +57,39 @@ const accounts = {
     const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
   },
+
+  changeEmail(request, response) {
+    const user = userstore.getUserByEmail(request.body.email);
+    if (user.email === request.body.email && user.password === request.body.password) {
+       userstore.updateEmail(user, request.body.newemail);
+     }
+     response.redirect('/profile');
+   },
+
+   changePassword(request, response) {
+     const user = userstore.getUserByEmail(request.body.email);
+     if (user.email === request.body.email && user.password === request.body.password) {
+       userstore.updatePassword(user, request.body.newpassword);
+     }
+     response.redirect('/profile');
+  },
+
+  changeFirstName(request, response) {
+    const user = userstore.getUserByEmail(request.body.email);
+    if (user.email === request.body.email && user.password === request.body.password) {
+      userstore.updateFirstName(user, request.body.newfirstname);
+    }
+    response.redirect('/profile');
+  },
+
+  changeLastName(request, response) {
+    const user = userstore.getUserByEmail(request.body.email);
+    if (user.email === request.body.email && user.password === request.body.password) {
+      userstore.updateLastName(user, request.body.newlastname);
+    }
+    response.redirect('/profile');
+  },
+
 };
 
 module.exports = accounts;
