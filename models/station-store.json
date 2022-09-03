@@ -15,25 +15,68 @@
           "weatherIcon": "cloud rain",
           "tempFar": "77.0",
           "beaufourt": 1
+        },
+        {
+          "id": "9b5d7170-2b6f-11ed-99a8-b1209c743f21",
+          "code": "700",
+          "temp": "26",
+          "windSpeed": "6",
+          "pressure": "1001",
+          "weather": "Snow",
+          "weatherIcon": "snowflake",
+          "tempFar": "78.8",
+          "beaufourt": 1
+        },
+        {
+          "id": "a2644d40-2b6f-11ed-99a8-b1209c743f21",
+          "code": "500",
+          "temp": "27",
+          "windSpeed": "6",
+          "pressure": "1000",
+          "weather": "Heavy Showers",
+          "weatherIcon": "cloud showers heavy",
+          "tempFar": "80.6",
+          "beaufourt": 1
+        },
+        {
+          "id": "c7d7d3f0-2b72-11ed-88e2-43cf2f835273",
+          "code": "700",
+          "temp": "28",
+          "windSpeed": "7",
+          "pressure": "1001",
+          "weather": "Snow",
+          "weatherIcon": "snowflake",
+          "tempFar": "82.4",
+          "beaufourt": 2
+        },
+        {
+          "id": "d26a2070-2b72-11ed-88e2-43cf2f835273",
+          "code": "800",
+          "temp": "29",
+          "windSpeed": "8",
+          "pressure": "1002"
         }
       ],
       "latestReading": {
-        "id": "de01dbf0-26c5-11ed-b40f-bb7c31a7a08c",
+        "id": "c7d7d3f0-2b72-11ed-88e2-43cf2f835273",
         "code": "700",
-        "temp": "27",
-        "windSpeed": "8",
+        "temp": "28",
+        "windSpeed": "7",
         "pressure": "1001",
         "weather": "Snow",
         "weatherIcon": "snowflake",
-        "tempFar": "80.6",
+        "tempFar": "82.4",
         "beaufourt": 2
       },
-      "maxTemp": "27",
-      "minTemp": "27",
-      "maxWind": "8",
-      "minWind": "8",
+      "maxTemp": "28",
+      "minTemp": "28",
+      "maxWind": "7",
+      "minWind": "7",
       "maxPressure": "1001",
-      "minPressure": "1001"
+      "minPressure": "1001",
+      "tempTrend": 1,
+      "windTrend": 0,
+      "pressureTrend": 0
     },
     {
       "id": "56494760-26c1-11ed-9bfc-2f71e1a3f0ec",

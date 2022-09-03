@@ -18,6 +18,11 @@ const stationAnalytics = {
     station.minWind = stationAnalytics.minWind(station.readings);
     station.maxPressure = stationAnalytics.maxPressure(station.readings);
     station.minPressure = stationAnalytics.minPressure(station.readings);
+
+    station.tempTrend = stationAnalytics.tempTrend(station.readings);
+    station.windTrend = stationAnalytics.windTrend(station.readings);
+    station.pressureTrend = stationAnalytics.pressureTrend(station.readings);
+
     return station;
   },
 
@@ -46,7 +51,7 @@ const stationAnalytics = {
     if (values.length > 1) {
       let min = values[0];
       for (let value of values) {
-        if (value > min) {
+        if (value < min) {
           min = value;
         }
       }
@@ -103,6 +108,55 @@ const stationAnalytics = {
       pressureReadings.push(reading.pressure);
     }
     return this.min(pressureReadings);
+  },
+
+  getTrend(values) {
+    let trend = 0;
+    if (values[0] > values[1] && values[1] > values[2]) {
+      trend = 1;
+    } else if (values[0] < values[1] && values[1] < values[2]) {
+      trend = -1;
+    }
+    return trend;
+  },
+
+  tempTrend(readings) {
+    let trend = 0;
+    if (readings.length > 2) {
+      let lastThreeReadings = [
+        readings[readings.length -1].temp,
+        readings[readings.length -2].temp,
+        readings[readings.length -3].temp
+      ];
+      trend = this.getTrend(lastThreeReadings);
+    }
+    return trend;
+  },
+
+  windTrend(readings) {
+    let trend = 0;
+    if (readings.length > 2) {
+      let lastThreeReadings = [
+        readings[readings.length -1].windSpeed,
+        readings[readings.length -2].windSpeed,
+        readings[readings.length -3].windSpeed
+      ];
+      trend = this.getTrend(lastThreeReadings);
+    }
+    return trend;
+  },
+
+  pressureTrend(readings) {
+    let trend = 0;
+    if (readings.length > 2) {
+      let lastThreeReadings = [
+        readings[readings.length -1].pressure,
+        readings[readings.length -2].pressure,
+        readings[readings.length -3].pressure
+      ];
+      trend = this.getTrend(lastThreeReadings);
+    }
+    return trend;
   },
 }
 

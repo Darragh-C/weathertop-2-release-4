@@ -45,12 +45,7 @@ const dashboard = {
     stationStore.removeStation(stationId);
     response.redirect("/dashboard")
   },
-  sortStations(stations) {
-    let sortedStations = [];
-    for (let station of stations) {
 
-    }
-  },
 };
 
 module.exports = dashboard;

@@ -21,7 +21,12 @@
     <div class="column">
       <div class="ui segment">
         <h3>Temp</h3>
-        <i class="huge grey temperature low icon"></i>
+        <i class="huge left floated grey temperature low icon"></i>
+        {{#ifEq station.tempTrend 1}}
+          <i class="huge right floated green arrow up icon"></i>
+        {{else ifEq station.tempTrend -1}}
+          <i class="huge red arrow down icon"></i>
+        {{/ifEq}}
         <br>
         {{station.latestReading.temp}} C or {{station.latestReading.tempFar}} F
         <br>
@@ -34,6 +39,11 @@
       <div class="ui segment">
         <h3>Wind speed</h3>
         <i class="huge grey wind icon"></i>
+        {{#ifEq station.windTrend 1}}
+          <i class="huge right floated green arrow up icon"></i>
+        {{else ifEq station.windTrend -1}}
+          <i class="huge red arrow down icon"></i>
+        {{/ifEq}}
         <br>
         {{station.latestReading.beaufourt}} Bft
         <br>
@@ -50,6 +60,11 @@
       <div class="ui segment">
         <h3>Pressure</h3>
         <i class="huge grey tachometer alternate icon"></i>
+        {{#ifEq station.pressureTrend 1}}
+          <i class="huge right floated green arrow up icon"></i>
+        {{else ifEq station.pressureTrend -1}}
+          <i class="huge red arrow down icon"></i>
+        {{/ifEq}}
         <br>
         {{station.latestReading.pressure}} hPa
         <br>

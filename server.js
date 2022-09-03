@@ -5,20 +5,36 @@ const logger = require("./utils/logger");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
+const exphbs = require("express-handlebars");
+
 
 const app = express();
 app.use(cookieParser());
-const exphbs = require("express-handlebars");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(fileUpload());
-app.engine(
-  ".hbs",
-  exphbs({
-    extname: ".hbs",
-    defaultLayout: "main"
-  })
-);
+
+const hbs = exphbs.create({
+  extname: ".hbs",
+  defaultLayout: "main",
+
+  //helpers
+  helpers: {
+    ifEq: function(variable, value, options){
+      //variable = station.tempTrend
+      //value = 1 or -1
+      if (variable == value) {
+        return options.fn(this);
+      } else {
+        return options.inverse(this);
+      }
+    }
+  },
+})
+
+app.engine(".hbs", hbs.engine);
+
 app.set("view engine", ".hbs");
 
 const routes = require("./routes");
