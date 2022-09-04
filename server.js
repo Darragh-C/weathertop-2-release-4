@@ -40,6 +40,6 @@ app.set("view engine", ".hbs");
 const routes = require("./routes");
 app.use("/", routes);
 
-const listener = app.listen(process.env.PORT || 9000, function() {
-  logger.info(`glitch-template-1 started on port ${listener.address().port}`);
+const listener = app.listen(process.env.PORT || 4000, function() {
+  logger.info(`weathertop-2-release-4 started on port ${listener.address().port}`);
 });

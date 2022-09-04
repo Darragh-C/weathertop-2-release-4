@@ -31,5 +31,6 @@ router.get("/profile", profile.index);
 router.get('/station/:id', station.index);
 router.post('/station/:id/addreading', station.addReading);
 router.get('/station/:id/deletereading/:readingid', station.deleteReading);
+router.get('/station/:id/autogenreading', station.autoGenerateReading);
 
 module.exports = router;
