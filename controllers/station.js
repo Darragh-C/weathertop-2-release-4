@@ -61,6 +61,15 @@ const station = {
       newReading.windDir = reading.wind_deg;
       newReading.openWeatherDesc = reading.weather[0].description;
       newReading.openWeatherIcon = reading.weather[0].icon;
+
+      newReading.tempTrend = [];
+      newReading.trendLabels = [];
+      const trends = result.data.daily;
+      for (let i = 0; i < trends.length; i++) {
+        newReading.tempTrend.push(trends[i].temp.day);
+        const date = new Date(trends[i].dt * 1000);
+        newReading.trendLabels.push(metricConversion.formatDate(date));
+      }
     };
       stationStore.addReading(stationId, newReading);
       response.redirect('/station/' + stationId);

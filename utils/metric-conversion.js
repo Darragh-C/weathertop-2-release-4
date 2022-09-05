@@ -103,7 +103,9 @@ const metricConversion = {
     }
   },
   formatDate(date) {
-    const formatedDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+    //special thanks to one Bambam on stack exchange for the mins trick to get double digits for minutes < 10 (https://stackoverflow.com/questions/8935414/getminutes-0-9-how-to-display-two-digit-numbers)
+    const mins = ('0' + date.getMinutes()).slice(-2);
+    const formatedDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + mins;
     return formatedDate;
   }
 }

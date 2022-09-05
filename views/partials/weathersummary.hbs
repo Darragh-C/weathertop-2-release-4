@@ -13,9 +13,21 @@
     <div class="column">
       <div class="ui segment">
         <h3>Weather</h3>
-        <i class="huge blue right floated {{latestReading.weatherIcon}} icon"></i>
+        <! -- renders openweather icon for API readings -->
+        {{#if latestReading.openWeatherApi}}
+          <image src="http://openweathermap.org/img/wn/{{latestReading.openWeatherIcon}}@2x.png"></image>
+        <! -- renders semantic ui icon for user added readings  -->
+        {{else}}
+          <i class="huge blue right floated {{latestReading.weatherIcon}} icon"></i>
+        {{/if}}
         <br>
-        {{latestReading.weather}}
+        <! -- renders openweather description for API readings -->
+        {{#if latestReading.openWeatherApi}}
+          {{latestReading.openWeatherDesc}}
+        <! -- renders homemade weather code for user added readings  -->
+        {{else}}
+          {{latestReading.weather}}
+        {{/if}}
       </div>
     </div>
     <div class="column">
