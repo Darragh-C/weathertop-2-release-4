@@ -1,6 +1,6 @@
-<div class="ui segment" id="tempChart"></div>
+<div class="ui segment" id="windChart"></div>
 <script>
-  const tempData = {
+  const windData = {
     labels: [
       {{#each station.latestReading.trendLabels}}
         "{{this}}",
@@ -8,18 +8,18 @@
     ],
     datasets: [
       {
-        name: "Temperature", type: "line",
+        name: "Wind", type: "line",
         values: [
-          {{#each station.latestReading.tempTrend}}
+          {{#each station.latestReading.windTrend}}
             {{this}},
           {{/each}}
         ]
       }
     ]
   };
-  const tempChart = new frappe.Chart("#tempChart", {
-    title: "Temperature trend",
-    data: tempData,
+  const windChart = new frappe.Chart("#windChart", {
+    title: "Wind speed trend",
+    data: windData,
     type: "line",
     height: 250,
   });

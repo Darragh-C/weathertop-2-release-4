@@ -62,15 +62,23 @@ const station = {
       newReading.openWeatherDesc = reading.weather[0].description;
       newReading.openWeatherIcon = reading.weather[0].icon;
 
-      newReading.tempTrend = [];
       newReading.trendLabels = [];
+
       const trends = result.data.daily;
+
+      newReading.tempTrend = [];
+      newReading.windTrend = [];
+      newReading.pressureTrend = [];
+
       for (let i = 0; i < trends.length; i++) {
         newReading.tempTrend.push(trends[i].temp.day);
+        newReading.windTrend.push(trends[i].wind_speed);
+        newReading.pressureTrend.push(trends[i].pressure);
         const date = new Date(trends[i].dt * 1000);
         newReading.trendLabels.push(metricConversion.formatDate(date));
       }
-    };
+
+    }
       stationStore.addReading(stationId, newReading);
       response.redirect('/station/' + stationId);
   },
