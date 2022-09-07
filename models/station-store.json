@@ -858,18 +858,22 @@
             1017,
             1011,
             1010
-          ]
+          ],
+          "tempFar": "62.7",
+          "beaufourt": 1,
+          "windCompass": "South South East",
+          "windChill": "17.84"
         }
       ],
       "latestReading": {
-        "id": "2098bf80-2d6d-11ed-ac1e-3364db9df8e4",
-        "date": "5/9/2022 23:50",
+        "id": "35d97690-2d6e-11ed-915e-b3a287ff835a",
+        "date": "5/9/2022 23:58",
         "openWeatherApi": "true",
         "code": 803,
         "temp": 17.03,
         "windSpeed": 4.47,
-        "pressure": 1005,
-        "windDir": 159,
+        "pressure": 1004,
+        "windDir": 149,
         "openWeatherDesc": "broken clouds",
         "openWeatherIcon": "04n",
         "trendLabels": [
@@ -926,6 +930,14 @@
       "tempTrend": 0,
       "windTrend": 0,
       "pressureTrend": 0
+    },
+    {
+      "id": "f395eca0-2ee9-11ed-9332-cdf2fe79f5bd",
+      "userid": "0f1da410-2b8c-11ed-a8f9-eb3ada4a8b4b",
+      "stationName": "Kinsale",
+      "latitude": "51.706",
+      "longitude": "-8.52",
+      "readings": []
     }
   ]
 }

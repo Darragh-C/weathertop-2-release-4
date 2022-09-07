@@ -25,9 +25,20 @@ const dashboard = {
       }
       return 0;
     });
+
+    const pins = [];
+    for (let station of stations) {
+      pins.push({
+        pinLat: station.latitude,
+        pinLong: station.longitude,
+      })
+    }
+
     const viewData = {
       title: "Weathertop 2.0 Release 2 Dashboard",
       stations: stations,
+      pins: pins,
+
     };
     logger.info('about to render', stationStore.getAllStations());
     response.render("dashboard", viewData);
