@@ -1,0 +1,10 @@
+<table class="ui table">
+  <thead>
+  {{> readings-header}}
+  </thead>
+  <tbody>
+    {{#each station.readings}}
+      {{> reading-row}}
+    {{/each}}
+  </tbody>
+</table>
